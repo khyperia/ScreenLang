@@ -1,0 +1,24 @@
+name:           ScreenLang
+version:        0.1
+cabal-version:  >=1.2
+build-type:     Simple
+author:         Evan
+
+executable ScreenLang
+  hs-source-dirs:  src
+  main-is:         Main.hs
+  build-depends:   
+                   base >= 4,
+                   parsec,
+                   llvm-general,
+                   llvm-general-pure,
+                   mtl,
+                   containers
+  ghc-options:     -Wall
+  other-modules:   
+                   Parser,
+                   Ast,
+                   LlvmEmit,
+                   LlvmCompile,
+                   ScreenLangPrelude
+
